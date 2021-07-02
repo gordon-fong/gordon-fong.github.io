@@ -1,0 +1,196 @@
+/* 
+Colour key!
+
+#011 bg
+#0d8 for large bright blocks
+#ffa titles!
+#0fa text
+#044 element highlight bg
+#088 dim borders
+# 
+
+*/
+
+body {
+    background-color: #011;
+
+    font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    color: #0fa;
+
+    text-align: justify;
+}
+h1 {
+    font-size: 36pt;
+}
+h2 {
+    font-size: 24pt;
+}
+h5 {
+    text-align: right;
+}
+a {
+    text-decoration: none;
+}
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* Nav bar */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #011;
+    
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    
+}
+.nav-list-item {
+    /* float: left; */
+    display: inline-block;
+}
+.nav-list-link {
+    /* 
+    padding: 10px 30px 10px 30px;
+    display: inline-block;
+    */
+    display: block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #0fa;
+    text-decoration: none;
+}
+.nav-list-link:hover {
+    background-color: #0fa;
+    color: #fff;
+}
+.active {
+    background-color: #0fa;
+    color: #011;
+}
+/* end od Nav bar */
+
+.profile-pic {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    border-color: #0fa;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 25%;
+}
+.profile-icon {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: -10px;
+    width: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 25%;
+}
+
+.header {
+    text-align: center;
+    color: #0fa;
+    margin-bottom: 65px;
+}
+
+.blog-preview-title {
+    display: inline-block;
+}
+.blog-preview-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+.blog-preview-article{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #088;
+    border-radius: 20px;
+
+    /* margin-bottom: 50px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    color: #0fa;
+}
+.blog-preview-article:hover {
+    background-color: #044;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0d8;
+    border-radius: 20px;
+}
+
+.body-text {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.code-excerpt {
+    font-family: monospace;
+    background-color: #044;
+    
+    padding: 2px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #088;
+    border-radius: 4px;
+}
+
+.page-content-ender {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.back-to-top {
+    display: block;
+    width: 100px;
+    float: right;
+    margin-top: 30px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 50px;
+}
+.back-to-top:hover {
+    background-color: #0d8;
+}
+.back-to-top a {
+    display: block;
+    text-align: center;
+    color: #0fa;
+    text-decoration: none;
+}
+.back-to-top a:hover {
+    color: #fff;
+}
+
+.footer {
+    background-color: #0d8;
+    color: #011;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 100px 0 0 0;
+}

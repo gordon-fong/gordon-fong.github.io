@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Types</title>
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+    <style>
+        .banner {
+            background-image: url(../../images/code3.jpeg);
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-color: #022;
+            background-blend-mode: multiply;
+        }
+
+        .example-area {
+            margin: 0px 50px 0px 50px;
+            padding: 10px;
+            border-color: #088;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+        }
+
+        .example-nav-list-item {
+            display: inline-block;
+        }
+        .example-nav-list-link {
+            display: block;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #0fa;
+            text-decoration: none;
+            background-color: #022;
+        }
+        .example-nav-list-link:hover {
+            background-color: #0fa;
+            color: #fff;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="header banner">
+        <h1 id="top">DISPLAY TYPES</h1>
+        <p>
+            What is the difference between 
+            <span class="code-excerpt">inline</span> , 
+            <span class="code-excerpt">block</span> & 
+            <span class="code-excerpt">inline-block</span>?
+        </p> 
+      </div>
+
+    <ul class="nav-list">
+      <li class="nav-list-item"><a href="../../index.html" class="nav-list-link">Home</a>
+      <li class="nav-list-item"><a href="../../blog-catalogue.html" class="nav-list-link active">Blog</a>
+      <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
+        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+    </ul>
+    
+    <div class="body-text">
+        <h5>July 1, 2021</h5>
+
+        <h2>
+            What is the display property?
+        </h2>
+
+        <p>
+            The display property determines how your content in your HTML file is displayed. Most elements default as <span class="code-excerpt">inline</span> or <span class="code-excerpt">block</span> types, but you may specify for an element to be displayed as an <span class="code-excerpt">inline-block</span> type element instead. All of these types are interchangeable, so use them as you see fit!
+        </p>
+
+        <h2>
+            Inline
+        </h2>
+        <p>CSS code <span class="code-excerpt">display: inline;</span></p>
+
+        <p>
+            <span class="code-excerpt">inline</span> elements appear next to each other in the order they are written in the HTML. These however, will not allow you adjust the top and bottom <span class="code-excerpt">margin</span> nor the corresponding <span class="code-excerpt">padding</span> attributes.
+        </p>
+
+        <p>
+            For example, <span class="code-excerpt">anchor</span> and <span class="code-excerpt">span</span> are displayed <span class="code-excerpt">inline</span> by default.
+        </p>
+        <div class="example-area">
+            <p>
+                This <a href="#" style=" text-decoration: underline; color: #0fa;">link</a> is displayed <span class="code-excerpt">inline</span> (&lt;- this is a span, by the way) with the sentence. I can also increase the left and right <span style="margin: 20px; background-color: #044">margin</span> and <span style="padding: 20px; background-color: #0ff4">padding</span>! It’ll ignore top and bottom margins and padding (though the highlight is still displayed).
+            </p>    
+        </div> 
+        
+        <h2>
+            Block
+        </h2>
+            
+        <p>CSS code <span class="code-excerpt">display: block;</span></p>
+
+        <p>
+            <span class="code-excerpt">block</span> elements will always start on a new line. These will look at any and all <span class="code-excerpt">margin</span> and <span class="code-excerpt">padding</span> values and apply them accordingly.
+        </p>
+            
+        <p>
+            For example, <span class="code-excerpt">paragraph</span>, <span class="code-excerpt">list</span> and <span class="code-excerpt">div</span> start on new lines.
+        </p>
+        <div class="example-area">
+            <p>
+                This is a paragraph of text.
+            </p>
+            <div style="padding: 30px; margin: 30px; text-align: center; border-style: solid; border-width: 2px; border-radius: 5px; background-color: #044;">
+                I’m a box! I've got a 30px margin and a 30px padding all around. A block element, like me, without a defined <span class="code-excerpt">width</span> will stretch to the edges of the width of the container I'm in (minus the margins of course).
+            </div>
+            <ul>
+                <li><p>I’m in a list!</p></li>
+                <li><p>Me too!</p></li>
+                <li><p>Me three!</p></li>
+            </ul>
+        </div>
+
+        <h2>
+            Inline-block
+        </h2>
+        
+        <p>CSS code <span class="code-excerpt">display: inline-block;</span></p>
+
+        <p>
+            Does exactly as it says. This will set an element to be displayed <span class="code-excerpt">inline</span> with all the attributes of a <span class="code-excerpt">block</span> element available, most notably with the top and bottom <span class="code-excerpt">margin</span> and <span class="code-excerpt">padding</span> in effect.
+        </p>
+        <div class="example-area">
+            <p style="display: inline-block;">
+                Let's kick it off with a random sentence to fill up the first line! Here's a bit more just in case. But why should we stop here? Let's fill up the second one too. Feel free to stop reading whenever! Okay, looks good enough on my end. Hopefully good on yours too! Here we see some <span style="display: inline-block; padding: 20px; margin: 5px; background-color: #044;">words with a some padding and margins</span> in the middle of this sentence! Actually, let's keep extending this sentence so that it covers multiple lines again, to for emphasis!
+            </p>
+        </div>
+
+        <p>
+            Here's another example:
+        </p>
+        <div class="example-area">
+            <p style="display: inline-block;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span> 
+                Id leo in vitae turpis massa sed. Pellentesque nec nam aliquam sem et. Ipsum dolor sit amet consectetur adipiscing elit duis. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Porta nibh venenatis cras sed felis eget velit aliquet. 
+                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Medium
+                </span>  
+                Integer malesuada nunc vel risus commodo. Sem integer vitae justo eget magna. Nisl nisi scelerisque eu ultrices vitae auctor. Pellentesque nec nam aliquam sem et tortor consequat. Tempor commodo ullamcorper a lacus. Ipsum dolor sit amet consectetur adipiscing elit duis. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. 
+                <span style="display:inline-block; width: 90px; height: 90px; text-align: center; line-height: 90px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Large
+                </span>
+                Here's some random words inbetween boxes! 
+                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Medium
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. 
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                    Tiny
+                </span>Porta nibh venenatis cras sed felis eget velit aliquet. Integer malesuada nunc vel risus commodo. Sem integer vitae justo eget magna. 
+            </p>
+            
+
+        </div>
+
+        <div id="example-nav-target">
+        </div>
+
+        <h2>
+            Why is this useful?
+        </h2>
+
+        <p>
+            I found this to be extremely useful for making my navigation bar. It consists of an unordered list of anchor elements.
+        </p>
+        
+        <p>
+            By default, the elements will be displayed like this (this bar is just a demo with dead links):
+        </p>
+        
+        <div class="example-area">
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#example-nav-target" class="example-nav-list-link">Home</a></li>
+                <li><a href="#example-nav-target" class="example-nav-list-link">Blog</a></li>
+                <li><a href="#example-nav-target" class="example-nav-list-link">About</a></li>
+            </ul>
+            
+            <!-- <p>
+                <pre class="code-excerpt">
+&lt;ul style="list-style: none; padding: 0;"&gt;
+    &lt;li&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Home
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Blog
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            About
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;  
+                </pre>
+            </p> -->
+        </div>
+
+        <p>
+            Declaring the list to display with and inline-block will give us this:
+        </p>
+        <div class="example-area">
+            <ul style="list-style: none; padding: 0;">
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">Home</a></li>
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">Blog</a></li>
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">About</a></li>
+            </ul>
+
+            <p>
+                <pre class="code-excerpt">
+&lt;ul style="list-style: none; padding: 0;"&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Home
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Blog
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            About&lt;
+        /a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </p>
+        </div>
+
+        <p>
+            That’s pretty much it on how I made my navigation bar, but there was just one little thing I didn’t like about this. Did you notice the small, unclickable spaces in between the links? They exist because <span class="code-excerpt">inline-block</span> lines the elements up like a sentence, so they are essentially the same spaces that exist when we type.
+        </p>
+        <p>
+            There are a few workarounds for this issue. For me, I removed the closing tags <span class="code-excerpt">&lt;/li&gt;</span> in my HTML and this fixed the gaps:
+        </p>
+        <div class="example-area">
+            <ul style="list-style: none; padding: 0;">
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">Home</a>
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">Blog</a>
+                <li class="example-nav-list-item"><a href="#example-nav-target" class="example-nav-list-link">About</a>
+            </ul>
+
+            <p>
+                <pre class="code-excerpt">
+&lt;ul style="list-style: none; padding: 0;"&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Home
+        &lt;/a&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            Blog
+        &lt;/a&gt;
+    &lt;li style="display: inline-block;"&gt;
+        &lt;a href="#example-nav-target" class="example-nav-list-link"&gt;
+            About&lt;
+        /a&gt;
+&lt;/ul&gt;
+                </pre>
+            </p>
+        </div>
+
+        <p>
+            You can have a look at the other workarounds found at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/" target="_blank" style="text-decoration: underline; color: #0fa;">css-tricks</a>! (&lt;- It’s a really cool site!)
+        </p>
+        <p>
+            I hope you found something useful for your project, or just had a good time. 
+        </p>
+        <p>
+            Thanks for reading and I’ll see you at the next one!
+        </p>
+
+    </div>
+
+    <div class="page-content-ender"><p style="text-align: center;">- - -</p></div>
+
+    <div class="back-to-top">
+      <a href="#top">Back to top</a>
+    </div>
+    
+    <div class=" body-text footer">
+      <h2>
+        Here be footers.
+      </h2>
+    </div>
+  </body>
+</html>

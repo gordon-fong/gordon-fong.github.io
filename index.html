@@ -1,9 +1,62 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>My blog</title>
+    <title>Gordon's Blog</title>
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  </head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
+    
+    <div id="top">
+      
+    </div>
+
+    <img src="images/ProfilePic.jpeg" alt="profile pic" class="profile-pic">
+    <div class="header">
+      <h1>GORDON FONG</h1>
+      <p>Student at EDA</p> 
+    </div>
+
+    <ul class="nav-list">
+      <li class="nav-list-item"><a href="index.html" class="nav-list-link active">Home</a>
+      <li class="nav-list-item"><a href="blog-catalogue.html" class="nav-list-link">Blog</a>
+      <li class="nav-list-item"><a href="about.html" class="nav-list-link">About</a></li>
+        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+    </ul>
+    
+    <div class="body-text">
+        <h2> Hello! </h2>
+        <p> This is site is going to document my learning journey throughout foundations and it will eventually contain a list of links to all my blogs.</p>
+        <p> You'll find my latest blog post below!</p>
+      <br>
+    </div>
+    
+    <div class="body-text">
+      <a href="blog/2021.07.01-inline-vs-inline-block/blog-display-types.html">
+        <div class="blog-preview-article">
+          <img src="images/ProfilePic.jpeg" alt="profile icon" class="profile-icon">
+          <h2 class="blog-preview-title">Display Types </h2>
+          <img src="images/code3.jpeg" alt="Image with lines of cool looking code!" class="blog-preview-img">
+          <p>This is part of sprint 2's technical challenge and my first post! Here I'll share what I have learnt about the display property and how I've used it to make what you see.</p>
+          
+          <h5>July 1, 2021</h5>
+        </div>
+      </a>
+    </div>
+
+    <div class="page-content-ender"><p style="text-align: center;">- - -</p></div>
+    
+    <div class="back-to-top">
+      <a href="#top">Back to top</a>
+    </div>
+    
+    <div class=" body-text footer">
+      <h2>
+        Here be footers.
+      </h2>
+    </div>
   </body>
 </html>
