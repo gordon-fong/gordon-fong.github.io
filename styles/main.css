@@ -11,6 +11,19 @@ Colour key!
 
 */
 
+/* 
+Font Key!
+Code segments
+font-family: 'Cutive Mono', monospace;
+
+General text
+font-family: 'Open Sans', sans-serif;
+
+Titles
+font-family: 'Oxanium', cursive;
+
+*/
+
 :root{
     /* Neon theme colors */
     --bg-color: #011;
@@ -19,25 +32,35 @@ Colour key!
     --dim-highlight-color: #0d8;
     --text-color: #0fa;
     --conditional-text-highlight-color: #fff;
+
+    --code-font: 'Cutive Mono';
+    --general-font: 'Open Sans';
+    --title-font: 'Oxanium';
 }
 
 
 body {
     background-color: var(--bg-color);
 
-    font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    font-family: var(--general-font), sans-serif;
     color: var(--text-color);
 
     text-align: justify;
 }
 h1 {
     font-size: 36pt;
+    font-family: var(--title-font), cursive;
+    font-weight: 600;
 }
 h2 {
     font-size: 24pt;
+    font-family: var(--title-font), cursive;
+    font-weight: normal;
+
 }
 h5 {
     text-align: right;
+    font-weight: lighter;
 }
 a {
     text-decoration: none;
@@ -153,7 +176,7 @@ pre {
     margin-right: 20%;
 }
 .code-excerpt {
-    font-family: monospace;
+    font-family: var(--code-font), monospace;
     background-color: var(--bg-highlight-color);
     
     padding: 2px;
