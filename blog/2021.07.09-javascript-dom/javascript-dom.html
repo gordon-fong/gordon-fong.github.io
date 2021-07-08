@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript &amp; DOM</title>
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oxanium:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- Fonts End -->
+    
+  </head>
+  <body>
+    <!-- "Back to top" target -->
+    <div id="top"></div>
+
+    <!-- Page titles -->
+    <div class="header">
+      <h1>Javascript &amp; DOM</h1>
+      <p>Let's breakdown some of the stuff going on in these things!</p> 
+    </div>
+
+    <!-- Nav bar -->
+    <ul class="nav-list">
+      <li class="nav-list-item"><a href="../../index.html" class="nav-list-link">Home</a>
+      <li class="nav-list-item"><a href="../../blog-catalogue.html" class="nav-list-link active">Blog</a>
+      <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
+        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+    </ul>
+    
+    <!-- Page content -->
+    <div class="body-text">
+        <h5>
+            July 9, 2021
+        </h5>
+        <h2>
+            HTML &amp; CSS &amp; Javascript?
+        </h2>
+        <p>
+            Let’s imagine that our HTML is a house. It’s been built to have all the rooms we need. However, it is really bland. Sure, we could live in it, but it won’t be comfortable or pretty to look at. 
+        </p>
+        <img src="images/1482268310-clx0910087a.jpeg" alt="Run down house" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            This is where CSS steps in. It adds flair to our house with some new paint and lets us rearrange or replace our furniture! It makes it easier for us to live in and our guests won’t run for the hills on arrival.
+        </p>
+        <img src="images/gallery-1482267727-clx0910086a.jpeg" alt="Renovated house" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            So what does Javascript do here? We can imagine them as future plans for the house. It might include moving or changing the look of furniture or wallpapers. It could even be renovations to add, remove, combine and shuffle rooms around! 
+        </p>
+        <img src="images/renovations_241016_01-800x500.jpeg" alt="Completely renovated houses" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <br>
+
+        <h2>
+            Loops &amp; Control Flow?
+        </h2>
+        <p>
+            Let’s eat some grapes. 
+        </p>
+        <img src="images/grapes.jpeg" alt="Grapes on vines" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            We’ve got a bunch and we start to pick at it. Our loop begins here! We will continue to eat these grapes until there are none left.
+        </p>
+        <p>
+            So our example loop will look something like this: 
+        </p>
+        <p>
+            <pre class="code-excerpt">
+// This is pseudo code, not actual code!
+
+while (grape > 0) {
+    eat grape; 
+}</pre>
+        </p>
+        <p>
+            But wait! What if we encounter a grotty grape that oozes its insides out at the slightest touch? We don’t want to eat that! Let's edit our control flow to reflect this:
+        </p>
+        <p>
+            <pre class="code-excerpt">
+// This is pseudo code, not actual code!
+
+while (grape > 0) {
+    if (grape-quality == acceptable) {
+        eat grape; 
+    } else {
+        scowl-at-grape;
+        delete-grape-from-existence;
+    }
+}</pre>
+        </p>
+        <p>
+            Cool! Once we eat or throw out all our grapes, we are free to carry on and do something else! 
+        </p>
+        <br>
+
+        <h2>
+            The DOM?
+        </h2>
+        <p>
+            It’s essentially a map! It tells us where places are, how to get there, what the area contains and what it looks like. 
+        </p>
+        <img src="images/eda-googlemaps.png" alt="EDA map view from Google Maps" width="100%" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            Not only that, the map is magic! If you get a marker and draw a hill on it, you will see the hill materialize in front of you. If you colour it pink, <span style="font-style: italic; font-weight: bold;">voilà!</span> It’s now a <span style="color: hotpink;">pink</span> hill! 
+        </p>
+        <p>
+            Now, what if you burn the map? Engulf it completely?  Welcome to the <span style="text-transform: uppercase; font-weight: 900; font-size: 24px; margin-left: 10px; margin-right: 10px;">- void -</span>.
+        </p>
+        <p style="text-align: center;">-</p>
+        <p>
+            But really, the DOM stands for Document Object Model. It allows us to inspect the web page and visualize what the heck the HTML and CSS code is doing. 
+        </p>
+        <img src="images/SOFTWARE-DEVELOPMENT-DOM-Tree-Web-Page-DOM.png" alt="DOM flowchart example" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            On top of that, the DOM allows us to change the code and see it take effect immediately. Reloading will reset it though! (It’d be absolute chaos if everybody could edit any page haha)
+        </p>
+        <p>
+            We can use JavaScript functions like loops, to select and iterate through our elements, changing anything we want, however we like.
+        </p>
+        <br>
+
+        <h2>
+            Arrays and Objects?
+        </h2>
+        <p>
+            We can imagine the arrays like an organized toolbox where the screwdrivers are arranged from biggest to smallest.
+        </p>
+        <img src="images/maxresdefault.jpeg" alt="An organised toolbox." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            In code, it looks something like this:
+            <pre class="code-excerpt">
+var toolbox = [
+    "screwdriverLargest",
+    "screwdriverLarge",
+    "screwdriverNormal",
+    "screwdriverSmall",
+    "screwdriverSmallest"
+];</pre>
+        </p>
+        <p>
+            If we specifically needed the second largest one, we would know to grab the second one from the left with : <span class="code-excerpt">toolbox[1]</span>.
+        </p>
+        <p>
+            We use [1] for the second item because arrays are zero-indexed (starts counting at 0).
+        </p>
+        <br>
+        <p>
+            Objects on the other hand… They are like a toolbox that contains pretty much everything you need, but it’s a complete mess. 
+        </p>
+        <img src="images/15917853002_995f27d477_b.jpeg" alt="A messy toolbox." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            They look like this:
+            <pre class="code-excerpt">
+var toolbox = {
+    “drillKey”: “drill”,
+    “pliersKey”: “pliers”,
+    “screwdriverKey”: “screwdriver”,
+    “scissorsKey”: “scissors”,
+    “knifeKey”: “sword”
+};</pre>
+        </p>
+        <p>
+            Need a screwdriver? You know it’s in there. You hesitate as you think of all the pointy things that could stab you in there, but you need it. You stick your hand in there to dig and rummage aroun- oh nevermind, it’s right here! How handy!
+        </p>
+        <p>
+            Here, <span class="code-excerpt">toolbox[“screwdriverKey”]</span> will give us the <span class="code-excerpt">“screwdriver”</span> item.
+        </p>
+        <p>
+            In other words...
+        </p>
+        <p>
+            Both arrays and objects are a collection of variables.  
+        </p>
+        <p>
+            Items in arrays are ordered (though not necessarily sorted). When you retrieve something from an array, you have to refer specifically to the placement of that item in that order.
+        </p>
+        <p>
+            Items contained in objects are labelled with a 'key' that contains a value. When we need a value of something inside the object, we just need to give it a 'key' and it will spit it out for us.
+        </p>
+        <br>
+
+        <h2>
+            Functions?
+        </h2>
+        <p>
+            What’s a decent analogy for this? I’m in the mood for toast as I’m writing this, so let’s use toast and toasters!
+        </p>
+        <img src="images/Vegan-French-Toast.jpeg" alt="The perfect toast." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            Let's say I happen to have two imaginary pieces of bread with me. One is fresh and one is frozen. I could toast one slice, throw away the toaster, buy a new one, and then toast the second piece... That would work but it’d be horribly impractical and expensive! So instead, I’m going to use the same toaster, but set the timer to be slightly longer for my frozen piece.
+        </p>
+        <img src="images/e72b5bf0627bed41bab21f0359890573fa43ac3f.jpeg" alt="A fancy looking toaster with a couple of slices of bread in it." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            In code, it might be something like this: 
+            <pre class="code-excerpt">
+// This is pseudo code, not actual code!
+
+function toastBread (toastingTime) {
+    insert-slice;
+    toast-this-slice-for (toastingTime);
+    pop-slice-up;
+    return toast;
+}
+
+// calling the function to run 
+toastBread (fresh-toastingTime);
+toastBread (frozen-toastingTime);</pre>
+        </p>
+        <p>
+            <span class="code-excerpt">toastingTime</span> is the parameter in the function. So calling that same function with a <span class="code-excerpt">fresh-toastingTime</span> and a <span class="code-excerpt">frozen-toastingTime</span> as the arguments for each of my slices should return two, equally <span style="text-transform: uppercase; font-weight: 900;">burnt</span> pieces of toast... -_-'
+        </p>
+        <img src="images/0db4d59950b90ed7cf5f7ddba127e36488c7ae56e5b31a3b9cef68b4419f7116_3876220.jpeg" alt="A fancy looking toaster with a couple of slices of bread in it." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <p>
+            Functions are great for efficiency and writing cleaner code. We’ll often be needing to run the same (or similar) sections of code over and over. Instead of copying and pasting that code and making slight changes each time, we can make a function containing that bit of code only once. We can substitute the values we need to tweak as variables known as parameters, in the function. Once that is done, whenever we need to use our function, we call it and plug in the parameters with new values, known as arguments.
+        </p>
+        <br>
+        <p>
+            Thanks for reading!
+        </p>
+        <br>
+    </div>
+    
+    <!-- Three dash divder at the end of each page -->
+    <div class="page-content-ender"><p style="text-align: center;">- - -</p></div>
+    
+    <!-- "Back to top" button -->
+    <div class="back-to-top">
+      <a href="#top">Back to top</a>
+    </div>
+    
+    <!-- Footer -->
+    <div class=" body-text footer">
+      <h2>
+        Here be footers.
+      </h2>
+    </div>
+  </body>
+</html>
