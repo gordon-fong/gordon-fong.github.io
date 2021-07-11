@@ -3,6 +3,7 @@
   <head>
     <title>Javascript &amp; DOM</title>
     <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/mainScript.js"></script>
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,20 +15,18 @@
         
         .banner {
             background-image: url(images/0_0_850_1_100__News_cottage-cheese-toast-frankie-ideas.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        }
 
-            background-color: #022;
-            background-blend-mode: multiply;
-
-            padding-top: 5%;
-            padding-bottom: 5%;
+        .blog-image {
+            display: block; 
+            width: 100%;
+            margin-right: auto; 
+            margin-left: auto;
         }
     </style>
 
   </head>
-  <body>
+  <body id="body">
     <!-- "Back to top" target -->
     <div id="top"></div>
 
@@ -44,7 +43,19 @@
       <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
         <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
     </ul>
-    
+    <!-- theme dropdown -->
+    <div class="theme-container">
+        <div class="theme-tab"><span>Themes</span></div>
+        <div class="theme-buttons">
+            <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+            <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+            <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+            <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+            <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+            <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+        </div>
+    </div>
+
     <!-- Page content -->
     <div class="body-text">
         <h5>
@@ -56,15 +67,15 @@
         <p>
             Let’s imagine that our HTML is a house. It’s been built to have all the rooms we need. However, it is really bland. Sure, we could live in it, but it won’t be comfortable or pretty to look at. 
         </p>
-        <img src="images/1482268310-clx0910087a.jpeg" alt="Run down house" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/1482268310-clx0910087a.jpeg" alt="Run down house" class="blog-image">
         <p>
             This is where CSS steps in. It adds flair to our house with some new paint and lets us rearrange or replace our furniture! It makes it easier for us to live in and our guests won’t run for the hills on arrival.
         </p>
-        <img src="images/gallery-1482267727-clx0910086a.jpeg" alt="Renovated house" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/gallery-1482267727-clx0910086a.jpeg" alt="Renovated house" class="blog-image">
         <p>
             So what does Javascript do here? We can imagine them as future plans for the house. It might include moving or changing the look of furniture or wallpapers. It could even be renovations to add, remove, combine and shuffle rooms around! 
         </p>
-        <img src="images/renovations_241016_01-800x500.jpeg" alt="Completely renovated houses" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/renovations_241016_01-800x500.jpeg" alt="Completely renovated houses" class="blog-image">
         <br>
 
         <h2>
@@ -73,7 +84,7 @@
         <p>
             Let’s eat some grapes. 
         </p>
-        <img src="images/grapes.jpeg" alt="Grapes on vines" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/grapes.jpeg" alt="Grapes on vines" class="blog-image">
         <p>
             We’ve got a bunch and we start to pick at it. Our loop begins here! We will continue to eat these grapes until there are none left.
         </p>
@@ -115,7 +126,7 @@ while (grape > 0) {
         <p>
             It’s essentially a map! It tells us where places are, how to get there, what the area contains and what it looks like. 
         </p>
-        <img src="images/eda-googlemaps.png" alt="EDA map view from Google Maps" width="100%" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/eda-googlemaps.png" alt="EDA map view from Google Maps" class="blog-image">
         <p>
             Not only that, the map is magic! If you get a marker and draw a hill on it, you will see the hill materialize in front of you. If you colour it pink, <span style="font-style: italic; font-weight: bold;">voilà!</span> It’s now a <span style="color: hotpink;">pink</span> hill! 
         </p>
@@ -126,7 +137,7 @@ while (grape > 0) {
         <p>
             But really, the DOM stands for Document Object Model. It allows us to inspect the web page and visualize what the heck the HTML and CSS code is doing. 
         </p>
-        <img src="images/SOFTWARE-DEVELOPMENT-DOM-Tree-Web-Page-DOM.png" alt="DOM flowchart example" height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/SOFTWARE-DEVELOPMENT-DOM-Tree-Web-Page-DOM.png" alt="DOM flowchart example" class="blog-image">
         <p>
             On top of that, the DOM allows us to change the code and see it take effect immediately. Reloading will reset it though! (It’d be absolute chaos if everybody could edit any page haha)
         </p>
@@ -141,7 +152,7 @@ while (grape > 0) {
         <p>
             We can imagine the arrays like an organized toolbox where the screwdrivers are arranged from biggest to smallest.
         </p>
-        <img src="images/maxresdefault.jpeg" alt="An organised toolbox." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/maxresdefault.jpeg" alt="An organised toolbox." class="blog-image">
         <p>
             In code, it looks something like this:
             <pre class="code-excerpt">
@@ -163,7 +174,7 @@ var toolbox = [
         <p>
             Objects on the other hand… They are like a toolbox that contains pretty much everything you need, but it’s a complete mess. 
         </p>
-        <img src="images/15917853002_995f27d477_b.jpeg" alt="A messy toolbox." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/15917853002_995f27d477_b.jpeg" alt="A messy toolbox." class="blog-image">
         <p>
             They look like this:
             <pre class="code-excerpt">
@@ -201,11 +212,11 @@ var toolbox = {
         <p>
             What’s a decent analogy for this? I’m in the mood for toast as I’m writing this, so let’s use toast and toasters!
         </p>
-        <img src="images/Vegan-French-Toast.jpeg" alt="The perfect toast." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/Vegan-French-Toast.jpeg" alt="The perfect toast." class="blog-image">
         <p>
             Let's say I happen to have two imaginary pieces of bread with me. One is fresh and one is frozen. I could toast one slice, throw away the toaster, buy a new one, and then toast the second piece... That would work but it’d be horribly impractical and expensive! So instead, I’m going to use the same toaster, but set the timer to be slightly longer for my frozen piece.
         </p>
-        <img src="images/e72b5bf0627bed41bab21f0359890573fa43ac3f.jpeg" alt="A fancy looking toaster with a couple of slices of bread in it." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/e72b5bf0627bed41bab21f0359890573fa43ac3f.jpeg" alt="A fancy looking toaster with a couple of slices of bread in it." class="blog-image">
         <p>
             In code, it might be something like this: 
             <pre class="code-excerpt">
@@ -225,7 +236,7 @@ toastBread (frozen-toastingTime);</pre>
         <p>
             <span class="code-excerpt">toastingTime</span> is the parameter in the function. So calling that same function with a <span class="code-excerpt">fresh-toastingTime</span> and a <span class="code-excerpt">frozen-toastingTime</span> as the arguments for each of my slices should return two, equally <span style="text-transform: uppercase; font-weight: 900;">burnt</span> pieces of toast... -_-'
         </p>
-        <img src="images/0db4d59950b90ed7cf5f7ddba127e36488c7ae56e5b31a3b9cef68b4419f7116_3876220.jpeg" alt="A fancy looking toaster with a couple of slices of bread in it." height="300px" style="display: block; margin-right: auto; margin-left: auto;">
+        <img src="images/0db4d59950b90ed7cf5f7ddba127e36488c7ae56e5b31a3b9cef68b4419f7116_3876220.jpeg" alt="Burnt toast." class="blog-image">
         <p>
             Functions are great for efficiency and writing cleaner code. We’ll often be needing to run the same (or similar) sections of code over and over. Instead of copying and pasting that code and making slight changes each time, we can make a function containing that bit of code only once. We can substitute the values we need to tweak as variables known as parameters, in the function. Once that is done, whenever we need to use our function, we call it and plug in the parameters with new values, known as arguments.
         </p>

@@ -3,6 +3,7 @@
   <head>
     <title>Display Types</title>
     <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/mainScript.js"></script>
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +15,12 @@
         
         .banner {
             background-image: url(images/code3.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            background-color: #022;
-            background-blend-mode: multiply;
-
-            padding-top: 5%;
-            padding-bottom: 5%;
         }
 
         .example-area {
             margin: 0px 50px 0px 50px;
             padding: 10px;
-            border-color: #088;
+            border-color: var(--border-color);
             border-style: solid;
             border-width: 2px;
             border-radius: 10px;
@@ -43,18 +35,18 @@
             height: 50px;
             text-align: center;
             line-height: 50px;
-            color: #0fa;
+            color: var(--bg-color);
             text-decoration: none;
-            background-color: #022;
+            background-color: var(--border-highlight-color);
         }
         .example-nav-list-link:hover {
-            background-color: #0fa;
-            color: #fff;
+            background-color: var(--text-color);
+            color: var(--conditional-text-highlight-color);
         }
     </style>
 
   </head>
-  <body>
+  <body id="body">
     <div class="header banner">
         <h1 id="top">DISPLAY TYPES</h1>
         <p>
@@ -71,7 +63,19 @@
       <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
         <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
     </ul>
-    
+     <!-- theme dropdown -->
+     <div class="theme-container">
+        <div class="theme-tab"><span>Themes</span></div>
+        <div class="theme-buttons">
+          <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+          <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+          <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+          <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+          <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+          <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+        </div>
+      </div>
+
     <div class="body-text">
         <h5>July 1, 2021</h5>
 
@@ -97,7 +101,7 @@
         </p>
         <div class="example-area">
             <p>
-                This <a href="#" style=" text-decoration: underline; color: #0fa;">link</a> is displayed <span class="code-excerpt">inline</span> (&lt;- this is a span, by the way) with the sentence. I can also increase the left and right <span style="margin: 20px; background-color: #044">margin</span> and <span style="padding: 20px; background-color: #0ff4">padding</span>! It’ll ignore top and bottom margins and padding (though the highlight is still displayed).
+                This <a href="#" style=" text-decoration: underline; color: var(--text-color);">link</a> is displayed <span class="code-excerpt">inline</span> (&lt;- this is a span, by the way) with the sentence. I can also increase the left and right <span style="margin: 20px; background-color: var(--bg-highlight-color);">margin</span> and <span style="padding: 10px; background-color: var(--bg-highlight-color);">padding</span>! It’ll ignore top and bottom margins and padding (though the highlight is still displayed).
             </p>    
         </div> 
         
@@ -118,7 +122,7 @@
             <p>
                 This is a paragraph of text.
             </p>
-            <div style="padding: 30px; margin: 30px; text-align: center; border-style: solid; border-width: 2px; border-radius: 5px; background-color: #044;">
+            <div style="padding: 30px; margin: 30px; text-align: center; border-style: solid; border-width: 2px; border-radius: 5px; background-color: var(--bg-highlight-color);">
                 I’m a box! I've got a 30px margin and a 30px padding all around. A block element, like me, without a defined <span class="code-excerpt">width</span> will stretch to the edges of the width of the container I'm in (minus the margins of course).
             </div>
             <ul>
@@ -139,7 +143,7 @@
         </p>
         <div class="example-area">
             <p style="display: inline-block;">
-                Let's kick it off with a random sentence to fill up the first line! Here's a bit more just in case. But why should we stop here? Let's fill up the second one too. Feel free to stop reading whenever! Okay, looks good enough on my end. Hopefully good on yours too! Here we see some <span style="display: inline-block; padding: 20px; margin: 5px; background-color: #044;">words with a some padding and margins</span> in the middle of this sentence! Actually, let's keep extending this sentence so that it covers multiple lines again, to for emphasis!
+                Let's kick it off with a random sentence to fill up the first line! Here's a bit more just in case. But why should we stop here? Let's fill up the second one too. Feel free to stop reading whenever! Okay, looks good enough on my end. Hopefully good on yours too! Here we see some <span style="display: inline-block; padding: 20px; margin: 5px; background-color: var(--bg-highlight-color);">words with a some padding and margins</span> in the middle of this sentence! Actually, let's keep extending this sentence so that it covers multiple lines again, to for emphasis!
             </p>
         </div>
 
@@ -149,41 +153,41 @@
         <div class="example-area">
             <p style="display: inline-block;">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span> 
                 Id leo in vitae turpis massa sed. Pellentesque nec nam aliquam sem et. Ipsum dolor sit amet consectetur adipiscing elit duis. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Porta nibh venenatis cras sed felis eget velit aliquet. 
-                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Medium
                 </span>  
                 Integer malesuada nunc vel risus commodo. Sem integer vitae justo eget magna. Nisl nisi scelerisque eu ultrices vitae auctor. Pellentesque nec nam aliquam sem et tortor consequat. Tempor commodo ullamcorper a lacus. Ipsum dolor sit amet consectetur adipiscing elit duis. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. 
-                <span style="display:inline-block; width: 90px; height: 90px; text-align: center; line-height: 90px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 90px; height: 90px; text-align: center; line-height: 90px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Large
                 </span>
                 Here's some random words inbetween boxes! 
-                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 60px; height: 60px; text-align: center; line-height: 60px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Medium
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
                 Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. 
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>
-                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: #044; border-style: solid; border-width: 2px; border-radius: 4px;">
+                <span style="display:inline-block; width: 30px; height: 30px; text-align: center; line-height: 30px; background-color: var(--bg-highlight-color); border-style: solid; border-width: 2px; border-radius: 4px;">
                     Tiny
                 </span>Porta nibh venenatis cras sed felis eget velit aliquet. Integer malesuada nunc vel risus commodo. Sem integer vitae justo eget magna. 
             </p>
@@ -303,7 +307,7 @@
         </div>
 
         <p>
-            You can have a look at the other workarounds found at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/" target="_blank" style="text-decoration: underline; color: #0fa;">css-tricks</a>! (&lt;- It’s a really cool site!)
+            You can have a look at the other workarounds found at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/" target="_blank" style="text-decoration: underline; color: var(--text-color);">css-tricks</a>! (&lt;- It’s a really cool site!)
         </p>
         <p>
             I hope you found something useful for your project, or just had a good time. 

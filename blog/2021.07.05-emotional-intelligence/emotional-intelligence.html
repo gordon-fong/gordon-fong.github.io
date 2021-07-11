@@ -3,6 +3,7 @@
   <head>
     <title>Emotional Intelligence</title>
     <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/mainScript.js"></script>
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,12 +12,12 @@
     <!-- Fonts End -->
     
   </head>
-  <body>
+  <body id="body">
     <!-- "Back to top" target -->
     <div id="top"></div>
 
     <!-- Page titles -->
-    <div class="header">
+    <div class="header banner">
       <h1>Emotional Intelligence</h1>
       <p>Exploring what emotional intelligence is and how it plays a part in our lives</p> 
     </div>
@@ -28,7 +29,19 @@
       <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
         <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
     </ul>
-    
+    <!-- theme dropdown -->
+    <div class="theme-container">
+      <div class="theme-tab"><span>Themes</span></div>
+      <div class="theme-buttons">
+        <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+        <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+        <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+        <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+        <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+        <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+      </div>
+    </div>
+
     <!-- Page content -->
     <div class="body-text">
       <h5>
