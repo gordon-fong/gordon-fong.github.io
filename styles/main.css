@@ -334,8 +334,8 @@ pre {
 }
 
 .body-text {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .code-excerpt {
     font-family: var(--code-font), monospace;
