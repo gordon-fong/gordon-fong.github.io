@@ -28,6 +28,11 @@ font-family: 'Oxanium', cursive;
     --code-font: 'Cutive Mono';
     --general-font: 'Open Sans';
     --title-font: 'Oxanium';
+
+    --text-font-size: 1rem;
+
+    --nav-height: 50px;
+    --neg-nav-height: -50px;
 }
 
 .theme-electric-blueberry{
@@ -122,16 +127,17 @@ body {
     color: var(--text-color);
 
     text-align: justify;
+    font-size: 1rem;
 }
 h1 {
-    font-size: 28pt;
+    font-size: 3rem;
     font-family: var(--title-font), cursive;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--title-color);
 }
 h2 {
-    font-size: 18pt;
+    font-size: 2rem;
     font-family: var(--title-font), cursive;
     font-weight: normal;
     color: var(--title-color);
@@ -176,9 +182,9 @@ pre {
     */
     display: block;
     width: 100px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
-    line-height: 50px;
+    line-height: var(--nav-height);
     color: var(--text-color);
     text-decoration: none;
 }
@@ -196,9 +202,9 @@ pre {
 .theme-container {
     display: block;
     width: 150px;
-    height: 50px;
+    height: var(--nav-height);
     float: right;
-    margin-top: -50px;
+    margin-top: var(--neg-nav-height);
     
     position: -webkit-sticky;
     position: sticky;
@@ -207,9 +213,9 @@ pre {
 .theme-tab {
     display: block;
     /* width: 150px;
-    height: 50px; */
+    height: var(--nav-height); */
     text-align: center;
-    line-height: 50px;
+    line-height: var(--nav-height);
     color: var(--text-color);
 }
 .theme-buttons {
@@ -217,9 +223,9 @@ pre {
 }
 .theme-buttons button {
     width: 155px;
-    height: 30px;
+    height: 0.6 * var(--nav-height);
     text-align: left;
-    line-height: 50px;
+    line-height: var(--nav-height);
     color: var(--text-color);
     background-color: var(--bg-color);
     border: 0;
@@ -324,6 +330,30 @@ pre {
     margin-left: 25%;
     margin-right: 25%;
 }
+@media (max-width: 1200px){
+    .body-text {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+@media (max-width: 1024px){
+    .body-text {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media (max-width: 768px){
+    .body-text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media (max-width: 480px){
+    .body-text {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
 .code-excerpt {
     font-family: var(--code-font), monospace;
     background-color: var(--bg-highlight-color);
@@ -355,6 +385,8 @@ pre {
     position: -webkit-sticky;
     position: sticky;
     bottom: 50px;
+
+    background-color: var(--bg-color);
 }
 .back-to-top:hover {
     background-color: var(--border-highlight-color);
