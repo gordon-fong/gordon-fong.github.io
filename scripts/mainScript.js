@@ -37,7 +37,38 @@ function getActiveTheme () {
 function setTheme (themeName) {
     var body = document.getElementById("body");
     body.className = themeName;
-    localStorage.setItem ("activeTheme", themeName)
+    localStorage.setItem ("activeTheme", themeName);
+
+    var themeButtons = document.getElementsByClassName("theme-buttons");
+    if (themeButtons.length = 1){
+        var themeButtonArr = Array.from(themeButtons[0].children);
+
+        themeButtonArr.forEach(item => item.classList.remove("active"));
+        var activeTheme = localStorage.getItem("activeTheme");
+        switch(activeTheme){
+            case ("theme-electric-blueberry"):
+                console.log ("I was set");
+                themeButtonArr[0].classList.add("active");
+                break;
+            case ("theme-fresh-mint"):
+                themeButtonArr[1].classList.add("active");
+                break;
+            case ("theme-raspberry-jam"):
+                themeButtonArr[2].classList.add("active");
+                break;
+            case ("theme-wildberry-yoghurt"):
+                themeButtonArr[3].classList.add("active");
+                break;
+            case ("theme-marmalade-tang"):
+                themeButtonArr[4].classList.add("active");
+                break;
+            case ("theme-honey-nut"):
+                themeButtonArr[5].classList.add("active");
+                break;
+        }
+    }
+    
+
 }
 function previewTheme(themeName) {
     var body = document.getElementById("body");

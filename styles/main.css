@@ -25,14 +25,6 @@ font-family: 'Oxanium', cursive;
 */
 
 :root{
-    /* Neon theme colors */
-    /* --bg-color: #011;
-    --bg-highlight-color: #044;
-    --border-color: #088;
-    --border-highlight-color: #0d8;
-    --text-color: #0fa;
-    --conditional-text-highlight-color: #fff; */
-
     --code-font: 'Cutive Mono';
     --general-font: 'Open Sans';
     --title-font: 'Oxanium';
@@ -46,25 +38,11 @@ font-family: 'Oxanium', cursive;
     --text-color: #0ba;
     --conditional-text-highlight-color: #fff;
     
-    --border-color: #0aa;
+    --border-color: #077;
     --border-highlight-color: #0fa;
     
     --footer-bg-color: #0d8;
     --footer-text-color: #022;
-    
-    
-    /* --bg-color: #011;
-    --bg-highlight-color: #044;
-    
-    --title-color: #0fa;
-    --text-color: #0fa;
-    --conditional-text-highlight-color: #fff;
-    
-    --border-color: #088;
-    --border-highlight-color: #0d8;
-    
-    --footer-bg-color: #0d8;
-    --footer-text-color: #022; */
 }
 .theme-fresh-mint {
     --bg-color: #fdffff;
@@ -84,8 +62,8 @@ font-family: 'Oxanium', cursive;
     --bg-color: #140008;
     --bg-highlight-color: #402;
     
-    --title-color: #f46;
-    --text-color: #e34;
+    --title-color: #f58;
+    --text-color: #d34;
     --conditional-text-highlight-color: #fff;
     
     --border-color: #a03;
@@ -98,7 +76,7 @@ font-family: 'Oxanium', cursive;
     --bg-color: #fee;
     --bg-highlight-color: #fdd;
     
-    --title-color: #f68;
+    --title-color: #f79;
     --text-color: #a46;
     --conditional-text-highlight-color: #fff;
     
@@ -117,7 +95,7 @@ font-family: 'Oxanium', cursive;
     --conditional-text-highlight-color: #fff;
     
     --border-color: #840;
-    --border-highlight-color: #e80;
+    --border-highlight-color: #d60;
     
     --footer-bg-color: #f60;
     --footer-text-color: #110800;
@@ -221,7 +199,7 @@ pre {
     height: 50px;
     float: right;
     margin-top: -50px;
-
+    
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -238,19 +216,27 @@ pre {
     display: none;
 }
 .theme-buttons button {
-    width: 150px;
+    width: 155px;
     height: 30px;
     text-align: left;
     line-height: 50px;
     color: var(--text-color);
     background-color: var(--bg-color);
     border: 0;
+    border-left: solid 5px;
     /* border-bottom: 1px solid; */
     font: inherit;
 }
+
+.theme-buttons button.active {
+    /* background-color: var(--bg-highlight-color); */
+    border-color: var(--title-color);
+    color: var(--title-color);
+}
+
 .theme-container:hover .theme-buttons {
     display: block;
-    border-left: solid 5px;
+    /* border-left: solid 5px; */
     /* border-bottom: solid 1px; */
 }
 .theme-tab:hover {
@@ -260,6 +246,7 @@ pre {
 .theme-buttons button:hover {
     background-color: var(--text-color);
     color: var(--conditional-text-highlight-color);
+    border-left: var(--text-color);
 }
 
 .profile-pic {
@@ -293,11 +280,11 @@ pre {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
     background-color: var(--bg-color);
     /* background-blend-mode: multiply; */
     background-blend-mode: overlay;
-
+    
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -317,7 +304,7 @@ pre {
     border-width: 2px;
     border-color: var(--border-color);
     border-radius: 20px;
-
+    
     margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -326,7 +313,7 @@ pre {
 }
 .blog-preview-article:hover {
     background-color: var(--bg-highlight-color);
-
+    
     border-style: solid;
     border-width: 2px;
     border-color: var(--border-highlight-color);
@@ -342,7 +329,7 @@ pre {
     background-color: var(--bg-highlight-color);
     
     padding: 0px;
-
+    
     border-style: solid;
     border-width: 2px;
     border-color: var(--border-color);
@@ -359,12 +346,12 @@ pre {
     width: 100px;
     float: right;
     margin-top: 30px;
-
+    
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
     border-color: var(--border-highlight-color);
-
+    
     position: -webkit-sticky;
     position: sticky;
     bottom: 50px;
