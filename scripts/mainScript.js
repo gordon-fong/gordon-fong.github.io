@@ -47,7 +47,6 @@ function setTheme (themeName) {
         var activeTheme = localStorage.getItem("activeTheme");
         switch(activeTheme){
             case ("theme-electric-blueberry"):
-                console.log ("I was set");
                 themeButtonArr[0].classList.add("active");
                 break;
             case ("theme-fresh-mint"):
@@ -73,10 +72,10 @@ function setTheme (themeName) {
 function previewTheme(themeName) {
     var body = document.getElementById("body");
     body.className = themeName;
-    console.log("preview themeName: " + themeName);
+    // console.log("preview themeName: " + themeName);
 }
 function unpreviewTheme(themeName) {
     var body = document.getElementById("body");
     body.className = themeName;
-    console.log("unpreview themeName: " + themeName);
+    // console.log("unpreview themeName: " + themeName);
 }
