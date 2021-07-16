@@ -188,31 +188,6 @@ pre {
     color: var(--text-color);
     text-decoration: none;
 }
-@media (max-width: 460px){
-    .nav-list-link{
-        width: 90px;
-    }
-}
-@media (max-width: 440px){
-    .nav-list-link{
-        width: 80px;
-    }
-}
-@media (max-width: 410px){
-    .nav-list-link{
-        width: 70px;
-    }
-}
-@media (max-width: 360px){
-    .nav-list-link{
-        width: 60px;
-    }
-}
-@media (max-width: 340px){
-    .nav-list-link{
-        width: 50px;
-    }
-}
 
 .nav-list-link:hover {
     background-color: var(--text-color);
@@ -280,6 +255,33 @@ pre {
     background-color: var(--text-color);
     color: var(--conditional-text-highlight-color);
     border-left: var(--text-color);
+}
+
+@media (max-width: 480px){
+    .nav-list {
+        width: 100%;
+    }
+    .nav-list-item {
+        width: 33%;
+    }
+    .nav-list-link{
+        width: 100%;
+    }
+    .nav-list-link a{
+        width: 100%;
+    }
+    .theme-container {
+        margin-top: 0;
+        width: 100%;
+        top: 50px;
+        background-color: var(--bg-color);
+    }
+    .theme-tab {
+        width: 100%;
+    }
+    .theme-buttons button {
+        width: 100%;
+    }
 }
 
 .profile-pic {
