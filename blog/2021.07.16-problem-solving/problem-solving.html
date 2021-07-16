@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problem Solving</title>
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/mainScript.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oxanium:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- Fonts End -->
+    
+    <style>
+        
+        .banner {
+            background-image: url(images/4235072f4d7b13e791c5be5968c59e22.jpeg);
+        }
+
+        .blog-image {
+            display: block; 
+            width: auto;
+            max-width: 100%;
+            margin-right: auto; 
+            margin-left: auto;
+        }
+    </style>
+
+  </head>
+  <body id="body">
+    <!-- "Back to top" target -->
+    <div id="top"></div>
+
+    <!-- Page titles -->
+    <div class="header banner">
+        <h1>Problem Solving</h1>
+        <p>Some personal experiences of how I worked through some of the katas</p> 
+    </div>
+
+    <!-- Nav bar -->
+    <ul class="nav-list">
+      <li class="nav-list-item"><a href="../../index.html" class="nav-list-link">Home</a>
+      <li class="nav-list-item"><a href="../../blog-catalogue.html" class="nav-list-link active">Blog</a>
+      <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
+        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+    </ul>
+    <!-- theme dropdown -->
+    <div class="theme-container">
+        <div class="theme-tab"><span>Themes</span></div>
+        <div class="theme-buttons">
+            <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+            <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+            <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+            <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+            <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+            <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="body-text">
+        <h5>
+            July 16, 2021
+        </h5>
+        <h2>
+          Experience of getting stuck on a simple problem...
+        </h2>
+        <p>
+          I got stuck on the Gradebook stretch challenge. I was confused at first because it was asking for something that I had done earlier. Strange right?
+        </p>
+        <p style="text-align: center;">-</p>
+        <p>
+          It’s like parking your car in clear view of your friend’s house, and then sometime later they ask, “Hey, where’s your car?” 
+        </p>
+        “Just out in the front,” you say.
+        <p>
+          “I don’t see it,” they reply. (This here is a metaphorical error message!)
+        </p>
+        <p>
+          Now a bunch of things are happening in our mind. We know we parked outside. We think our friend must just be ‘innocently’ mistaken. 
+        </p>
+        <p>
+          So we go to correct them by pointing out (console.logging) our car… Wait… Where IS our car?
+        </p>
+        <p>
+          A brief burst of panic sets in.
+        </p>
+        <p>
+          We frantically backtrack in our mind, pointing out where we’ve been and how we got to where we parked our car. 
+        </p>
+        <p>
+          Everything seems to be in order...
+        </p>
+        <p>
+          We look at where our car should be again. Still empty. Yep.
+        </p>
+        <p>
+          What could have possibly happened to it?
+        </p>
+        <p>
+          We pace back and forth, trying not to get frustrated. We have a cup of tea to reset.
+        </p>
+        <p>
+          Then we think back to our time spent at our friend’s place. They disappeared for five minutes a little while ago without explanation. That’s pretty sus.
+        </p>
+        <p>
+          “Where did you go earlier?” We ask.
+        </p>
+        <p>
+          A smirk creeps across their face. “To move your car, of course.”
+        </p>
+        <p style="text-align: center;">-</p>
+        <p>
+          Long story short, it was a simple problem that made me sweat and doubt what I did earlier. I took the time to comb over the tests, line by line and see that my gradebook object was emptied out along the way. 
+        </p>
+        <p>
+          I couldn’t help but laugh a little as to how this little detail had eluded me for longer than I’d like to admit. Once found, everything made sense and all I had to do was restate what I had done earlier, inside a function. Or in other words, I just had to park my car again!
+        </p>
+        <p>
+          I learnt to be more thorough and not get too tunnel-visioned from this exercise. Overall though, that was a really sneaky move and just a little evil. I like it... >:)
+        </p>
+        <br>
+
+        <h2>
+          Solving a problem with elegance...
+        </h2>
+        <p>
+          The FizzBuzz Challenge! I spent a lot of time thinking of and writing out the steps of how I’ll approach both parts of this challenge, following the expression of, ‘measure twice, cut once’. 
+        </p>
+        <p>
+          I discovered many sub-steps I hadn’t thought about initially by simply running through the logic one step at a time. I was constantly asking myself, “what do I need here?” and “where should this go?” It was quite a soothing experience walking through it.
+        </p>
+        <p>
+          Once I was happy with what I had, I converted it directly to code and it was so satisfying to see everything just slot perfectly in place!
+        </p>
+        <img src="images/WholePaleBufeo-size_restricted.gif" alt="An oddly satisfying looping gif" class="blog-image">
+        <br>
+
+        <h2>
+          My comfort level with problem solving techniques and process
+        </h2>
+        <h2>
+          Pseudocode
+        </h2>
+        <p>
+          Pseudocode is incredibly useful! I find most of the core issues I may encounter with this method, saving time while actually coding. 
+        </p>
+        <h2>
+          Trying something
+        </h2>
+        <p>
+          This pairs well with googling! I usually do this by trying a different approach to get past a small issue so I can tackle the bigger problem. I shelve the original approach and investigate why that particular method didn’t work compared to the alternative, later on.
+        </p>
+        <h2>
+          Rubber ducky method
+        </h2>
+        <p>
+          I use it without knowing. I need more practice using this method consciously. Solves many problems I overlook.
+        </p>
+        <h2>
+          Reading error messages
+        </h2>
+        <p>
+          I always read the messages, but I should expand my knowledge of what they consist of. I just pick out key parts such as the type of error (an undefined variable 99% of the time...), the file’s name of where it is occurring, and the line number inside that file. This helps triangulate my focus.
+        </p>
+        <h2>
+          Console.logging
+        </h2>
+        <p>
+          I like being able to see what I’m doing at each step. I have a bad habit of inserting a console.log after every line of code. Worst of all, I don’t always remember to remove them after xD
+        </p>
+        <p>
+          I’m working on the clean up!
+        </p>
+        <h2>
+          Googling
+        </h2>
+        <p>
+          Google is great! With practice, I’ve been able to be more specific in my searches. I normally look up the MDN documentation first to understand the fundamentals of how something works first and try solutions from there.
+        </p>
+        <h2>
+          Asking your peers for help
+        </h2>
+        <p>
+          I will only ask after I try and fail the solo methods first. However, if someone asks me for help, I drop everything and see if we can work it out together haha.
+        </p>
+        <h2>
+          Asking coaches for help
+        </h2>
+        <p>
+          This is my last resort when approaching new problems, but I’ll ask for some more clarification to further my knowledge or why a certain approach doesn’t work compared to something else.
+        </p>
+        <h2>
+          Improving your process with reflection
+        </h2>
+        <p>
+          Reflecting on what worked and what didn’t helps me repeat the same mistakes less often. Good to refer back to them every now and again.
+        </p>
+
+    </div>
+    
+    <!-- Three dash divder at the end of each page -->
+    <div class="page-content-ender"><p style="text-align: center;">- - -</p></div>
+    
+    <!-- "Back to top" button -->
+    <div class="back-to-top">
+      <a href="#top">Back to top</a>
+    </div>
+    
+    <!-- Footer -->
+    <div class=" body-text footer">
+      <h2>
+        Here be footers.
+      </h2>
+    </div>
+  </body>
+</html>

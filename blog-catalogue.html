@@ -1,135 +1,161 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blog Catalogue</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css">
-    <script src="scripts/mainScript.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Blog Catalogue</title>
+  <link href="styles/main.css" rel="stylesheet" type="text/css">
+  <script src="scripts/mainScript.js"></script>
 
-    <!-- Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oxanium:wght@200;400;600;800&display=swap" rel="stylesheet">
-    <!-- Fonts End -->
-    
-  </head>
-  <body id="body">
-    
-    <div id="top">
-      
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oxanium:wght@200;400;600;800&display=swap"
+    rel="stylesheet">
+  <!-- Fonts End -->
+
+</head>
+
+<body id="body">
+
+  <div id="top">
+
+  </div>
+
+  <div class="header banner">
+    <h1>BLOG CATALOGUE</h1>
+    <p>A list of all my blogs</p>
+  </div>
+
+  <ul class="nav-list">
+    <li class="nav-list-item"><a href="index.html" class="nav-list-link">Home</a>
+    <li class="nav-list-item"><a href="blog-catalogue.html" class="nav-list-link active">Blog</a>
+    <li class="nav-list-item"><a href="about.html" class="nav-list-link">About</a></li>
+    <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+  </ul>
+  <!-- theme dropdown -->
+  <div class="theme-container">
+    <div class="theme-tab"><span>Themes</span></div>
+    <div class="theme-buttons">
+      <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+      <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+      <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+      <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+      <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+      <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')"
+        onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
     </div>
+  </div>
 
-    <div class="header banner">
-      <h1>BLOG CATALOGUE</h1>
-      <p>A list of all my blogs</p> 
-    </div>
+  <div class="body-text">
+    <h2> Blogs </h2>
+  </div>
 
-    <ul class="nav-list">
-      <li class="nav-list-item"><a href="index.html" class="nav-list-link">Home</a>
-      <li class="nav-list-item"><a href="blog-catalogue.html" class="nav-list-link active">Blog</a>
-      <li class="nav-list-item"><a href="about.html" class="nav-list-link">About</a></li>
-        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
-    </ul>
-    <!-- theme dropdown -->
-    <div class="theme-container">
-      <div class="theme-tab"><span>Themes</span></div>
-      <div class="theme-buttons">
-          <button onclick="setTheme('theme-electric-blueberry')" onmouseover="previewTheme('theme-electric-blueberry')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
-          <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
-          <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
-          <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
-          <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
-          <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')" onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+  <div class="body-text">
+    <a href="blog/2021.07.16-problem-solving/problem-solving.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Problem Solving</h2>
+        <p>
+          Sprint 4, tech. Problem solving our katas!
+        </p>
+        <h5>July 16, 2021</h5>
       </div>
-    </div>
-    
-    <div class="body-text">
-        <h2> Blogs </h2>
-    </div>
+    </a>
+  </div>
 
-    <div class="body-text">
-      <a href="blog/2021.07.12-neuroplasticity-and-growth-mindset/neuroplasticity.html">
-          <div class="blog-preview-article">
-              <h2 class="blog-preview-title">Neuroplasticity &amp; Growth Mindset</h2>
-              <p>
-                  Sprint 4, core. Understanding how we learn and being in a positive mindset.
-              </p>
-              <h5>July 12, 2021</h5>
-          </div>
-        </a>
+  <div class="body-text">
+    <a href="blog/2021.07.12-neuroplasticity-and-growth-mindset/neuroplasticity.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Neuroplasticity &amp; Growth Mindset</h2>
+        <p>
+          Sprint 4, core. Understanding how we learn and being in a positive mindset.
+        </p>
+        <h5>July 12, 2021</h5>
       </div>
+    </a>
+  </div>
 
-    <div class="body-text">
-      <a href="blog/2021.07.09-javascript-dom/javascript-dom.html">
-          <div class="blog-preview-article">
-              <h2 class="blog-preview-title">JavaScript &amp; The DOM</h2>
-              <p>
-                  Sprint 3, tech. Using analogies to explain a bunch of concepts we went through this week!
-              </p>
-              <h5>July 9, 2021</h5>
-          </div>
-        </a>
+  <div class="body-text">
+    <a href="blog/2021.07.09-javascript-dom/javascript-dom.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">JavaScript &amp; The DOM</h2>
+        <p>
+          Sprint 3, tech. Using analogies to explain a bunch of concepts we went through this week!
+        </p>
+        <h5>July 9, 2021</h5>
       </div>
+    </a>
+  </div>
 
-      <div class="body-text">
-        <a href="blog/2021.07.05-emotional-intelligence/emotional-intelligence.html">
-            <div class="blog-preview-article">
-                <h2 class="blog-preview-title">Emotional Intelligence</h2>
-                <p>
-                    Sprint 3, core. Being aware and in control of our emotions.
-                </p>
-                <h5>July 5, 2021</h5>
-            </div>
-          </a>
-        </div>
-
-    <div class="body-text">
-      <a href="blog/2021.07.04-learning-plan/learning-plan.html">
-          <div class="blog-preview-article">
-              <h2 class="blog-preview-title">Learning Plan</h2>
-              <p>
-                  Sprint 2, core. Plan out my approach to how I will set goals and achieve them.
-              </p>
-              <h5>July 4, 2021</h5>
-          </div>
-        </a>
+  <div class="body-text">
+    <a href="blog/2021.07.05-emotional-intelligence/emotional-intelligence.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Emotional Intelligence</h2>
+        <p>
+          Sprint 3, core. Being aware and in control of our emotions.
+        </p>
+        <h5>July 5, 2021</h5>
       </div>
+    </a>
+  </div>
 
-    <div class="body-text">
-      <a href="blog/2021.07.04-identities-values-strengths/identities-values-strengths.html">
-          <div class="blog-preview-article">
-              <h2 class="blog-preview-title">Identities, Values and Strengths</h2>
-              <p>
-                  Sprint 2, core. Indentifying my identity, values and strengths from Sprint 1.
-              </p>
-              <h5>July 4, 2021</h5>
-          </div>
-      </a>
-    </div>
-    
-    <div class="body-text">
-        <a href="blog/2021.07.01-inline-vs-inline-block/blog-display-types.html">
-            <div class="blog-preview-article">
-                <h2 class="blog-preview-title">Display Types </h2>
-                <p>
-                    Sprint 2, tech. This blog covers the display types <span class="code-excerpt">inline</span>, <span class="code-excerpt">block</span> and <span class="code-excerpt">inline-code</span>.
-                </p>
-                <h5>July 1, 2021</h5>
-            </div>
-        </a>
-    </div>
-    
-    <div class="page-content-ender"><p style="text-align: center;">- - -</p></div>
-    
-    <div class="back-to-top">
-      <a href="#top">Back to top</a>
-    </div>
-    
-    <div class=" body-text footer">
-      <h2>
-        Here be footers.
-      </h2>
-    </div>
-  </body>
+  <div class="body-text">
+    <a href="blog/2021.07.04-learning-plan/learning-plan.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Learning Plan</h2>
+        <p>
+          Sprint 2, core. Plan out my approach to how I will set goals and achieve them.
+        </p>
+        <h5>July 4, 2021</h5>
+      </div>
+    </a>
+  </div>
+
+  <div class="body-text">
+    <a href="blog/2021.07.04-identities-values-strengths/identities-values-strengths.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Identities, Values and Strengths</h2>
+        <p>
+          Sprint 2, core. Indentifying my identity, values and strengths from Sprint 1.
+        </p>
+        <h5>July 4, 2021</h5>
+      </div>
+    </a>
+  </div>
+
+  <div class="body-text">
+    <a href="blog/2021.07.01-inline-vs-inline-block/blog-display-types.html">
+      <div class="blog-preview-article">
+        <h2 class="blog-preview-title">Display Types </h2>
+        <p>
+          Sprint 2, tech. This blog covers the display types <span class="code-excerpt">inline</span>, <span
+            class="code-excerpt">block</span> and <span class="code-excerpt">inline-code</span>.
+        </p>
+        <h5>July 1, 2021</h5>
+      </div>
+    </a>
+  </div>
+
+  <div class="page-content-ender">
+    <p style="text-align: center;">- - -</p>
+  </div>
+
+  <div class="back-to-top">
+    <a href="#top">Back to top</a>
+  </div>
+
+  <div class=" body-text footer">
+    <h2>
+      Here be footers.
+    </h2>
+  </div>
+</body>
+
 </html>
