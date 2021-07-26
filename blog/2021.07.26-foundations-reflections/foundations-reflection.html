@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Foundations Reflection</title>
+    <link href="../../styles/main.css" rel="stylesheet" type="text/css">
+    <script src="../../scripts/mainScript.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oxanium:wght@200;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Fonts End -->
+
+    <style>
+        .banner {
+            background-image: none;
+        }
+
+        .blog-image {
+            display: block;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <!-- "Back to top" target -->
+    <div id="top"></div>
+
+    <!-- Page titles -->
+    <div class="header banner">
+        <h1>Foundations Reflection</h1>
+        <p>Reflecting on core material from foundations</p>
+    </div>
+
+    <!-- Nav bar -->
+    <ul class="nav-list">
+        <li class="nav-list-item"><a href="../../index.html" class="nav-list-link">Home</a>
+        <li class="nav-list-item"><a href="../../blog-catalogue.html" class="nav-list-link active">Blog</a>
+        <li class="nav-list-item"><a href="../../about.html" class="nav-list-link">About</a></li>
+        <!-- I omitted the </li> of the items to get rid of the spacing in between the elements. It looks weird but it works. -->
+    </ul>
+    <!-- theme dropdown -->
+    <div class="theme-container">
+        <div class="theme-tab"><span>Themes</span></div>
+        <div class="theme-buttons">
+            <button onclick="setTheme('theme-electric-blueberry')"
+                onmouseover="previewTheme('theme-electric-blueberry')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Electric Blueberry</button>
+            <button onclick="setTheme('theme-fresh-mint')" onmouseover="previewTheme('theme-fresh-mint')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Fresh Mint</button>
+            <button onclick="setTheme('theme-raspberry-jam')" onmouseover="previewTheme('theme-raspberry-jam')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Raspberry Jam</button>
+            <button onclick="setTheme('theme-wildberry-yoghurt')" onmouseover="previewTheme('theme-wildberry-yoghurt')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Wildberry Yoghurt</button>
+            <button onclick="setTheme('theme-marmalade-tang')" onmouseover="previewTheme('theme-marmalade-tang')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Marmalade Tang</button>
+            <button onclick="setTheme('theme-honey-nut')" onmouseover="previewTheme('theme-honey-nut')"
+                onmouseout="unpreviewTheme(localStorage.getItem('activeTheme'))">Honey Nut</button>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="body-text">
+        <h5>
+            July 26, 2021
+        </h5>
+        <h2>
+            What are three new things you have learned about yourself and your ego as a result of the core learning?
+        </h2>
+        <p>
+            I have learned that I really enjoy sharing and expanding my knowledge with others. A few times during our javascript sections, I think I have aided others in their understanding and development of breaking down problems. When I help, I exercise the listening and looping aspect along with emotional intelligence to understand their approach and how they feel about it so we can pursue this path together. 
+        </p>
+        <p>
+            In turn, I feel this has improved my confidence and allowed me to practice my communication skills, in terms of explaining ideas and concepts in simple ways. And through this, I have also learned that I really like analogies! I found that it's a great way to learn.
+        </p>
+        <p>
+            I realised that a lot of the time in the past, I had a fixed mindset. This often came from seeing great art and I would think “Wow, this looks really cool. I wish I could do that.” Being aware of neuroplasticity and making an effort to maintain a growth mindset has given me a lot of motivation to take small steps towards accomplishing big goals.
+        </p>
+        <br>
+
+        <h2>
+            What are the role of values, empathy and self awareness in learning and programming?
+        </h2>
+        <p>
+            I think all of these are most important when working in a team environment. The values we bring contribute to what we can offer to the team. Empathy us to understand how the team is feeling / thinking so everyone works better together. Self awareness of our own strengths and limitations help keep us on task and shapes how we might approach a problem. Being self aware of our own fatigue and emotional balance is also important to take proper care of ourselves.
+        </p>
+
+        <h2>
+            What has surprised you the most about the core learning?
+        </h2>
+        <p>
+            A couple things. How in depth the learning goes and how much I struggled with it. I think it has helped the most with making me aware of where and how to get my motivation. Something that will be very important in bootcamp, I’m sure.
+        </p>
+        <br>
+
+        <h2>
+            What were the most challenging aspects of the core learning?
+        </h2>
+        <p>
+            I have struggled the most with putting my thoughts into words and really diving deep as to how I feel about certain aspects.
+        </p>
+        <br>
+        
+        <h2>
+            Why do you think we, a programming school, are spending so much time focusing on core learning in a web development bootcamp course?
+        </h2>
+        <p>
+            To prepare us for employment. The fact that employers view the hard/technical skills second to being a good person, has popped up a few times. The technical training can be learned on the job, but being someone that people want to work with is what gets people jobs in general.
+        </p>
+        <br>
+
+        <h2>
+            Does the time you spent studying core learning here feel like a waste of time? Should you have just used that time to practising programming instead? Justify your answer.
+        </h2>
+        <p>
+            The time spent on core was worth it. I have been spending what feels like the most time on these sections. I think they are important to learn to be aware of and a good change of pace away from code. 
+        </p>
+    </div>
+
+    <!-- Three dash divder at the end of each page -->
+    <div class="page-content-ender">
+        <p style="text-align: center;">- - -</p>
+    </div>
+
+    <!-- "Back to top" button -->
+    <div class="back-to-top">
+        <a href="#top">Back to top</a>
+    </div>
+
+    <!-- Footer -->
+    <div class=" body-text footer">
+        <h2>
+            Here be footers.
+        </h2>
+    </div>
+</body>
+
+</html>
